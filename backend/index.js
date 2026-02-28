@@ -18,7 +18,7 @@ const port = process.env.PORT || 5000;
 // ✅ Allowed Frontend URLs
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://incredible-naiad-5af846.netlify.app",
+  "https://ephemeral-narwhal-51e5a7.netlify.app",
 
 
 ];
