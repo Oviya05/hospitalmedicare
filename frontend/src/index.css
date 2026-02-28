@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  main, .page-content, .profile-page, .container {
+    @apply pt-[0px];
+  }
+}
+
+
+
+@layer components{
+    .container {
+        @apply max-w-full w-[1440px] px-5 mx-auto;
+    }
+
+    .btn {
+      @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px];
+    }
+
+    .heading{
+         @apply text-[44px] leading-[54px] font-[700] text-headingColor;
+    }
+
+    .text__para {
+        @apply text-[18px] leading-[30px] font-[400] text-gray-700 mt-[18px];
+    }
+   .header {
+  @apply bg-[url("./assets/images/mask.png")] bg-no-repeat bg-cover w-full h-[100px] leading-[10px];
+}
+
+}
+
+
+
+/* sticky header fix */
+.sticky__header {
+  @apply bg-white shadow-md fixed top-0 left-0 w-full z-50 py-3;
+}
+
+
+    .hero__section{
+        @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-center bg-cover ;
+    }
+
+
+.form_label {
+  @apply text-textColor font-semibold text-[16px] leading-7 mb-2;
+}
+
+.form_input {
+  @apply w-full px-4 py-3 border border-solid border-[#0066ff61]
+    focus:outline-none focus:border-primaryColor text-[16px] leading-7
+    text-headingColor placeholder:text-textColor cursor-pointer rounded-md;
+}
+
+
+
+@media only screen and (max-width:1024px)
+ {
+    .container {
+  @apply max-w-[1400px] w-full px-5 mx-auto;
+}
+
+
+    section {
+        @apply py-[35px];
+    }
+}
+
+@media only screen and (max-width:768px)
+ {
+    .heading {
+        @apply text-[26px] leading-[36px];
+    }
+
+    .text__para {
+        @apply text-[16px] leading-7 mt-3;
+    }
+}

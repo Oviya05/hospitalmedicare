@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Keeps scrollbar width consistent */
+html {
+  overflow-y: scroll;
+}
+
+/* ---------------- SWIPER ---------------- */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border: 1px solid #181a1e !important;
+  opacity: 100% !important;
+  background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0067ff !important;
+  border: none !important;
+}
+
+.swiper {
+  padding-bottom: 70px !important;
+}
+
+.swiper-slide.swiper-slide-next {
+  background: #0067ff;
+  border-radius: 12px;
+  box-shadow: 0px 20px 70px rgba(0, 103, 255, 0.3) !important;
+}
+
+.swiper-slide.swiper-slide-next h4,
+.swiper-slide.swiper-slide-next p {
+  color: #fff !important;
+}
+
+.swiper-pagination {
+  top: 90% !important;
+}
+
+/* ---------------- HEADER ---------------- */
+.sticky__header {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Align header contents */
+.sticky__header > div {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ✅ Fix gap between header and main page */
+main,
+section:first-of-type {
+  margin-top: 0 !important; /* Remove any extra margin */
+  padding-top: 0px; /* Reduced from 80px to 60px for tighter alignment */
+}
+
+/* ---------------- MOBILE MENU ---------------- */
+@media only screen and (max-width: 1024px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu {
+    width: 15rem;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .show__menu {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .show__menu .menu {
+    transform: translateX(0);
+  }
+
+  .sticky__header > div {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+}
