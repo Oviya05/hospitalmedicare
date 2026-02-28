@@ -19,8 +19,6 @@ const port = process.env.PORT || 5000;
 const allowedOrigins = [
   "http://localhost:5173",
   "https://ephemeral-narwhal-51e5a7.netlify.app",
-
-
 ];
 
 // ✅ CORS Configuration
